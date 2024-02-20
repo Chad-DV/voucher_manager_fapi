@@ -1,0 +1,11 @@
+1. List of requirements
+2. Define Architecture type 
+3. Define API Endpoints
+4. code interfaces
+ - management
+ - redeemer
+5. write unit tests
+6. containerize
+7. implement security (time permitting)
+8 containerize secure version
+9 final testing & deployment documentation
