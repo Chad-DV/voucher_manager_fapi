@@ -1,11 +1,36 @@
-1. List of requirements
+1. List of requirements 
+  -> see requirements.txt
+
 2. Define Architecture type 
+  -> MVC architecture with a controller for management and one for redeemer? 
+
 3. Define API Endpoints
-4. code interfaces
+MANAGEMENT
+    POST:   Create Voucher 
+    GET:    get Voucher By ID
+    GET:    get All Vouchers
+    PUT:    update voucher by ID
+    DELETE: Delete Voucher By ID
+    DELETE: Delete all expired vouchers
+
+REDEMPTION
+    POST:   Redeem Voucher by ID
+    GET:    List of redeemed Vouchers
+    GET:    Active Vouchers (list of all couchers that haven't expired)
+    
+
+4. code interfaces (controllers)
  - management
  - redeemer
+
 5. write unit tests
-6. containerize
+
+6. containerize (once done first pass for project is good)
+
 7. implement security (time permitting)
-8 containerize secure version
-9 final testing & deployment documentation
+
+8. Edit unit tests
+
+9. containerize secure version 
+
+10. final testing & deployment & documentation
