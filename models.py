@@ -4,6 +4,7 @@ from datetime import datetime
 
 class VoucherPayload(BaseModel):
     id: int
+    code: str
     max_redemptions: int
     expiry_date: datetime | None
 

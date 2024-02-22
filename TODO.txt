@@ -3,15 +3,16 @@
 
 2. Define Architecture type 
   -> MVC architecture with a controller for management and one for redeemer? 
+  -> redis selected as data store 
 
 3. Define API Endpoints
 MANAGEMENT
     POST:   Create Voucher 
     GET:    get Voucher By ID
     GET:    get All Vouchers
-    PUT:    update voucher by ID
+    PUT:    update voucher 
     DELETE: Delete Voucher By ID
-    DELETE: Delete all expired vouchers
+    
 
 REDEMPTION
     POST:   Redeem Voucher by ID
