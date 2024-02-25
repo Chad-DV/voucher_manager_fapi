@@ -1,0 +1,30 @@
+# Virtual environment
+.venv/
+
+# Compiled Python files
+*.pyc
+
+# Editor/IDE files
+.vscode/
+.devcontainer/
+
+# Dependency directories
+__pycache__/
+env/
+venv/
+env.bak/
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# Local configuration
+.env
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# System and hidden files
+.DS_Store
+Thumbs.db
