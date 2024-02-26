@@ -1,9 +1,16 @@
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Boolean, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-
+from config import get_database_settings
 
 Base = declarative_base()
+
+# Fetch database settings from config
+postgres_config = get_database_settings()
+
+# Create the engine
+
+
 
 class Voucher(Base):
     '''
@@ -28,7 +35,12 @@ class RedemptionDate(Base):
     voucher_code = Column(String, ForeignKey('voucher.code'), nullable=False)
     redeemed_at = Column(DateTime, nullable=False)
 
+try:
+    engine = create_engine(f"postgresql://{postgres_config['username']}:{postgres_config['password']}@{postgres_config['host']}:{postgres_config['port']}/{postgres_config['database']}")
+    Base.metadata.create_all(engine)
 
-engine = create_engine("postgresql://dev:devuser@localhost:5432/dev_db")
-Base.metadata.create_all(engine)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    # Create a sessionmaker to interact with the database   
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+except Exception as e:
+    print(e)
+    quit()

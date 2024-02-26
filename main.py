@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
-from models import DefaultVoucher,generate_unique_code
-from database.database import Voucher,RedemptionDate
-from voucher import VoucherRepository,RedemptionDateRepository
+from voucher_management.models import DefaultVoucher,generate_unique_code
+from voucher_management.database.database import Voucher,RedemptionDate
+from voucher_management.voucher import VoucherRepository,RedemptionDateRepository
 from datetime import datetime
 
 
@@ -92,4 +92,4 @@ def pydantic_to_sqlalchemy(pydantic_instance: DefaultVoucher) -> Voucher:
 if __name__ == "__main__":
     
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)

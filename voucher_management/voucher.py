@@ -1,6 +1,6 @@
 from fastapi import HTTPException
-from database.database import SessionLocal
-from database.database import Voucher, RedemptionDate
+from voucher_management.database.database import SessionLocal
+from voucher_management.database.database import Voucher, RedemptionDate
 import typing
 
 class VoucherRepository:
